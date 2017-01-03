@@ -2,3 +2,4 @@
 .chalice/venv/
 *.pyc
 *~
+chalicelib/__init__.py
