@@ -16,7 +16,7 @@ for more info.
 ### Clone the repository
 
     git clone https://github.com/alasdairnicol/python-lambda-contact-form
-    ce python-lambda-contact-form
+    cd python-lambda-contact-form
 
 [1]: https://github.com/awslabs/chalice 
 [2]: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-email-addresses.html
