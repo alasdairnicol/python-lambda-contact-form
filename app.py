@@ -1,4 +1,4 @@
-import urlparse
+from urllib.parse import parse_qs
 
 import boto3
 
@@ -15,7 +15,7 @@ def contact():
     from_email = FROM_EMAIL
     site = SITE
 
-    parsed = urlparse.parse_qs(app.current_request.raw_body)
+    parsed = parse_qs(app.current_request.raw_body)
 
     # Default to [None] to avoid IndexError
     name = parsed.get('name', [None])[0]
