@@ -8,7 +8,7 @@ from chalicelib import TO_EMAIL, FROM_EMAIL, SITE
 app = Chalice(app_name='contactform')
 
 
-@app.route('/contact', methods=['POST'], content_types=['application/x-www-form-urlencoded'], cors=True)
+@app.route('/contact', methods=['POST'], content_types=['application/x-www-form-urlencoded; charset=utf-8'], cors=True)
 def contact():
     # Set these in chalice/__init__.py
     to_email = TO_EMAIL
