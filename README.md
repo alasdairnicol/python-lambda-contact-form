@@ -8,14 +8,14 @@ It is written for Python 3.6.
 
 I use it on my site at https://al.sdair.co.uk/contact/
 
-## Instructions (WIP)
+## Instructions (WIP)
 
 ### Verify your from-email address
 
 AWS requires that you verify the from email address. See [the docs][2]
 for more info.
 
-### Clone the repository
+### Clone the repository
 
     git clone https://github.com/alasdairnicol/python-lambda-contact-form
     cd python-lambda-contact-form
