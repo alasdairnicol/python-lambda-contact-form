@@ -2,3 +2,4 @@
 TO_EMAIL = 'to@example.com'
 FROM_EMAIL = 'from@example.com'
 SITE = 'example.com'
+IGNORE = []

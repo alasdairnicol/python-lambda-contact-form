@@ -3,7 +3,7 @@ from urllib.parse import parse_qs
 import boto3
 
 from chalice import Chalice, BadRequestError
-from chalicelib import TO_EMAIL, FROM_EMAIL, SITE
+from chalicelib import TO_EMAIL, FROM_EMAIL, SITE, IGNORE
 
 app = Chalice(app_name='contactform')
 
@@ -28,6 +28,13 @@ def contact():
         raise BadRequestError("Please enter your email")
     if not message:
         raise BadRequestError("Please enter your message")
+
+    # Don't send message if it contains words from IGNORE list
+    for ignore in IGNORE:
+        if ignore in message:
+            return {
+                "status": "OK",
+            }
 
     client = boto3.client('ses')
 
