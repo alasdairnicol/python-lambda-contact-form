@@ -1,0 +1,2 @@
+boto3
+chalice >= 1.0
