@@ -15,7 +15,7 @@ def contact():
     from_email = FROM_EMAIL
     site = SITE
 
-    parsed = parse_qs(app.current_request.raw_body)
+    parsed = parse_qs(app.current_request.raw_body.decode('utf-8'))
 
     # Default to [None] to avoid IndexError
     name = parsed.get('name', [None])[0]
