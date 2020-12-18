@@ -34,9 +34,11 @@ def contact():
     if not message:
         raise BadRequestError("Please enter your message")
 
-    # Don't send if messge or name contains words from IGNORE list
+    # Don't send if messge, name, or email contains words from IGNORE list
     for ignore in IGNORE:
-        if ignore in message.lower() or ignore in name.lower():
+        if any(
+            [ignore in message.lower(), ignore in name.lower(), ignore in email.lower()]
+        ):
             return {
                 "status": "OK",
             }
